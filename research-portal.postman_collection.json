@@ -1,0 +1,119 @@
+{
+  "info": {
+    "_postman_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+    "name": "Research Opportunity Portal",
+    "description": "API collection for the University Research Opportunity Portal — CN Assignment 1",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Research Opportunity Portal",
+      "item": [
+        {
+          "name": "1. Create Opportunity 1 — AI/ML",
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "url": {"raw": "http://localhost:3000/api/opportunities", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "opportunities"]},
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Machine Learning in Healthcare Diagnostics\",\n  \"description\": \"This research project explores the application of machine learning algorithms to improve early diagnosis of chronic diseases using patient data and imaging.\",\n  \"research_area\": \"Artificial Intelligence\",\n  \"faculty_name\": \"Dr. Sarah Ahmed\",\n  \"department\": \"Computer Science\",\n  \"required_skills\": \"Python, TensorFlow, Data Analysis, Statistics\",\n  \"available_positions\": 3,\n  \"application_deadline\": \"2025-08-31\",\n  \"status\": \"Open\"\n}"
+            }
+          }
+        },
+        {
+          "name": "2. Create Opportunity 2 — Cybersecurity",
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "url": {"raw": "http://localhost:3000/api/opportunities", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "opportunities"]},
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Network Intrusion Detection Using Deep Learning\",\n  \"description\": \"Research focused on developing real-time intrusion detection systems using deep neural networks to identify and respond to cyber threats in university networks.\",\n  \"research_area\": \"Cybersecurity\",\n  \"faculty_name\": \"Dr. Usman Khalid\",\n  \"department\": \"Information Technology\",\n  \"required_skills\": \"Networking, Python, Deep Learning, Wireshark\",\n  \"available_positions\": 2,\n  \"application_deadline\": \"2025-09-15\",\n  \"status\": \"Open\"\n}"
+            }
+          }
+        },
+        {
+          "name": "3. Create Opportunity 3 — Data Science",
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "url": {"raw": "http://localhost:3000/api/opportunities", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "opportunities"]},
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Predictive Analytics for Student Academic Performance\",\n  \"description\": \"This study applies predictive analytics and data mining techniques to forecast student academic outcomes and identify at-risk students for early intervention.\",\n  \"research_area\": \"Data Science\",\n  \"faculty_name\": \"Dr. Ayesha Malik\",\n  \"department\": \"Statistics\",\n  \"required_skills\": \"R, Python, Machine Learning, SQL, Data Visualization\",\n  \"available_positions\": 4,\n  \"application_deadline\": \"2025-10-01\",\n  \"status\": \"Open\"\n}"
+            }
+          }
+        },
+        {
+          "name": "4. Get All Opportunities",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {"raw": "http://localhost:3000/api/opportunities", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "opportunities"]}
+          }
+        },
+        {
+          "name": "5. Get One Opportunity (ID=1)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {"raw": "http://localhost:3000/api/opportunities/1", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "opportunities", "1"]}
+          }
+        },
+        {
+          "name": "6. Update Opportunity (ID=1)",
+          "request": {
+            "method": "PUT",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "url": {"raw": "http://localhost:3000/api/opportunities/1", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "opportunities", "1"]},
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Advanced ML in Healthcare — Updated\",\n  \"description\": \"Updated description: expanded scope to include natural language processing for medical record analysis alongside imaging diagnostics.\",\n  \"available_positions\": 5\n}"
+            }
+          }
+        },
+        {
+          "name": "7. Close Opportunity (ID=1)",
+          "request": {
+            "method": "PUT",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "url": {"raw": "http://localhost:3000/api/opportunities/1", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "opportunities", "1"]},
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"Closed\"\n}"
+            }
+          }
+        },
+        {
+          "name": "8. Delete Opportunity (ID=3)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {"raw": "http://localhost:3000/api/opportunities/3", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "opportunities", "3"]}
+          }
+        },
+        {
+          "name": "9. Get Deleted Opportunity — 404 (ID=3)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {"raw": "http://localhost:3000/api/opportunities/3", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "opportunities", "3"]}
+          }
+        },
+        {
+          "name": "10. Invalid Data — 400 (missing fields)",
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "url": {"raw": "http://localhost:3000/api/opportunities", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "opportunities"]},
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"\",\n  \"description\": \"Missing required fields test\"\n}"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

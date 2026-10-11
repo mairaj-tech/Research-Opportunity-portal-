@@ -1,0 +1,88 @@
+/* Research Opportunity Portal - Custom Styles */
+
+body {
+  background-color: #f8f9fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.opportunity-card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 100%;
+}
+
+.opportunity-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.card-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #212529;
+}
+
+.status-badge-open {
+  background-color: #198754;
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.status-badge-closed {
+  background-color: #dc3545;
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+#form-section {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+#alert-container {
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  z-index: 9999;
+  width: 360px;
+}
+
+.form-label {
+  font-weight: 500;
+}
+
+.card-meta {
+  font-size: 0.85rem;
+  color: #6c757d;
+}
+
+.modal-header {
+  background-color: #0d6efd;
+  color: #fff;
+}
+
+.modal-header .btn-close {
+  filter: invert(1);
+}
+
+#no-results {
+  text-align: center;
+  padding: 3rem 0;
+  color: #6c757d;
+}
