@@ -46,8 +46,8 @@ research-opportunity-portal/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/username/research-opportunity-portal
-cd research-opportunity-portal
+git clone https://github.com/mairaj-tech/Research-Opportunity-portal-.git
+cd Research-Opportunity-portal-
 ```
 
 ### 2. Install backend dependencies
@@ -142,10 +142,8 @@ Import `research-portal.postman_collection.json` into Postman:
 ## GitHub Repository
 
 ```
-https://github.com/username/research-opportunity-portal
+https://github.com/mairaj-tech/Research-Opportunity-portal-
 ```
-
-> Replace `username` with your actual GitHub username before submission.
 
 ---
 
